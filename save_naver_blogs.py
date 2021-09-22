@@ -34,7 +34,7 @@ def get_blogs(keywords, client_id, client_secret):
 
         if r.status_code == requests.codes.ok:
             result_response = json.loads(r.content.decode('utf-8'))
-            result = result_response["items"]
+            result = result_response["items"] #아이템만 수집!!
         else:
             print('request 실패!!')
             failed_msg = json.loads(r.content.decode('utf-8'))
